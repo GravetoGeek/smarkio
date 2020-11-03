@@ -19,6 +19,7 @@ Confira a existência do MySql-server e do cliente Workbench em seu sistema.
 
 ## Passo 01
 Crie um usuário e senha com permissão DBA no workbench em: Server > Users and Privileges.
+
 Atenção: Não é possível executar o projeto utilizando a conta ROOT do mysql por questões de segurança, é extritamente necessário a criação de um novo usuário com permissões DBA.
 
 <img src="/imagens/01.png" alt="Criando usuário e senha"/>
@@ -60,6 +61,7 @@ O arquivo AnaliseDescritiva.sql possui 2 querys necessárias para uma posterior 
 Este módulo possui mapeamento objeto-relacional, possui uma API para acesso às entidades status,usuarios,intencoes,mensagens. Desenvolvido em NODE.JS, utiliza bibliotecas como Express, mysql2, Sequelize,Sequelize-automate.
 
 Para executá-lo, abra o prompt de comando ou shell em "teste-smarkio/passo-05/db" e execute o comando:
+
 "node index.js"
 
 Para testar a API, abra http://localhost:8888 e modifique a url para corresponder à tabela desejada.

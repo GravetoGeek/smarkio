@@ -2,6 +2,8 @@ const model = require("../models");
 const express = require("express");
 const mensagens = model.mensagens_model;
 
+
+//Função de controle para inserção de dados.
 const create = (request,response)=>{
     mensagens.create(request.body).then(
         (object)=>{
@@ -15,7 +17,7 @@ const create = (request,response)=>{
     );
 };
 
-
+//Função de controle que retorna todos os registros disponíveis no banco de dados.
 const getAll = (request,response)=>{
     mensagens.findAll({raw:true}).then(
         (object)=>{
@@ -28,7 +30,7 @@ const getAll = (request,response)=>{
     );
 };
 
-
+// Função de controle que busca um registro específico por ID.
 const getById = (request,response)=>{
     mensagens.findByPk(request.params.id).then(
         (object)=>{
@@ -42,7 +44,7 @@ const getById = (request,response)=>{
     );
 };
 
-
+// Função de controle que altera um registro específico por ID.
 const alterById = (request,response)=>{
     mensagens.update(
         request.body,
@@ -59,6 +61,7 @@ const alterById = (request,response)=>{
     );
 };
 
+//Função de controle que exclui um registro específico por ID.
 const deleteById = (request,response)=>{
     mensagens.destroy(
         {where:{
@@ -80,7 +83,7 @@ const deleteById = (request,response)=>{
 
 
 
-
+//Exporta as funções
 module.exports = {
     create,
     getAll,

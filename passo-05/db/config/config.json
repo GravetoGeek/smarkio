@@ -1,6 +1,6 @@
 {
   "development": {
-    "username": "smarkio",
+    "username": "smarkio",  //Não utilize conta root, é necessário uma nova conda com permissões de acesso.
     "password": "12345",
     "database": "smarkiodb",
     "host": "127.0.0.1",
@@ -10,7 +10,7 @@
     }
   },
   "test": {
-    "username": "smarkio",
+    "username": "smarkio",  //Não utilize conta root, é necessário uma nova conda com permissões de acesso.
     "password": "12345",
     "database": "smarkiodb",
     "host": "127.0.0.1",
@@ -20,7 +20,7 @@
     }
   },
   "production": {
-    "username": "smarkio",
+    "username": "smarkio",  //Não utilize conta root, é necessário uma nova conda com permissões de acesso.
     "password": "12345",
     "database": "smarkiodb",
     "host": "127.0.0.1",

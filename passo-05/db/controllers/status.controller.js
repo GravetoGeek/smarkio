@@ -2,6 +2,8 @@ const model = require("../models");
 const express = require("express");
 const status = model.status_model;
 
+
+//Função de controle para inserção de dados.
 const create = (request,response)=>{
     status.create(request.body).then(
         (object)=>{
@@ -16,6 +18,7 @@ const create = (request,response)=>{
 };
 
 
+//Função de controle que retorna todos os registros disponíveis no banco de dados.
 const getAll = (request,response)=>{
     status.findAll({raw:true}).then(
         (object)=>{
@@ -29,6 +32,7 @@ const getAll = (request,response)=>{
 };
 
 
+// Função de controle que busca um registro específico por ID.
 const getById = (request,response)=>{
     status.findByPk(request.params.id).then(
         (object)=>{
@@ -42,7 +46,7 @@ const getById = (request,response)=>{
     );
 };
 
-
+// Função de controle que altera um registro específico por ID.
 const alterById = (request,response)=>{
     status.update(
         request.body,
@@ -59,6 +63,8 @@ const alterById = (request,response)=>{
     );
 };
 
+
+//Função de controle que exclui um registro específico por ID.
 const deleteById = (request,response)=>{
     status.destroy(
         {where:{
@@ -80,7 +86,7 @@ const deleteById = (request,response)=>{
 
 
 
-
+//Exporta as funções
 module.exports = {
     create,
     getAll,

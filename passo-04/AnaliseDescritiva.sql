@@ -1,4 +1,4 @@
-Status:
+-- Status:
 
 select A.status,
 A.msg,
@@ -14,7 +14,7 @@ group by mensagens.idstatus
 
 
 
-Intenções:
+-- Intenções:
 select A.nome,
 A.Mensagens,
 A.Mensagens/(select count(*) from mensagens)*100 as percentual

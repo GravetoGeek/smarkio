@@ -89,31 +89,32 @@ O arquivo AnaliseDescritiva.sql possui 2 querys necessárias para uma posterior 
 
 Este módulo possui mapeamento objeto-relacional, possui uma API para acesso às entidades status,usuarios,intencoes,mensagens. Desenvolvido em NODE.JS, utiliza bibliotecas como Express, mysql2, Sequelize,Sequelize-automate.
 
+Para executá-lo, abra o prompt de comando ou shell em "teste-smarkio/passo-05/db" e execute o comando:
+"node index.js"
+
+Para testar a API, abra http://localhost:8888 e modifique a url para corresponder à tabela desejada.
+
+Exemplo:
+Para listar todas as entradas da tabela:
+
+http://localhost:8888/usuarios
+http://localhost:8888/intencoes
+http://localhost:8888/status
+http://localhost:8888/mensagens
+
+Para obter uma entrada específica pelo id:
+
+http://localhost:8888/usuario/1
+http://localhost:8888/intencao/1
+http://localhost:8888/status/1
+http://localhost:8888/mensagem/1
+
+
+
 
 
 
 # dashboard
 Este módulo está em desenvolvimento, utilizando-se do framework Vue , utiliza bibliotecas como axios, bootstrap-vue, vue-router.
 
-## Project setup
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

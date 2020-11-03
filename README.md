@@ -1,18 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Teste prático BI
 
 Este teste foi dividido em cinco etapas:
@@ -70,21 +55,6 @@ O arquivo AnaliseDescritiva.sql possui 2 querys necessárias para uma posterior 
 ## Passo 05
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Módulo Banco de dados
 
 Este módulo possui mapeamento objeto-relacional, possui uma API para acesso às entidades status,usuarios,intencoes,mensagens. Desenvolvido em NODE.JS, utiliza bibliotecas como Express, mysql2, Sequelize,Sequelize-automate.
@@ -95,18 +65,25 @@ Para executá-lo, abra o prompt de comando ou shell em "teste-smarkio/passo-05/d
 Para testar a API, abra http://localhost:8888 e modifique a url para corresponder à tabela desejada.
 
 Exemplo:
-Para listar todas as entradas da tabela:
+### Para listar todas as entradas da tabela:
 
 http://localhost:8888/usuarios
+
 http://localhost:8888/intencoes
+
 http://localhost:8888/status
+
 http://localhost:8888/mensagens
 
-Para obter uma entrada específica pelo id:
+
+### Para obter uma entrada específica pelo id:
 
 http://localhost:8888/usuario/1
+
 http://localhost:8888/intencao/1
+
 http://localhost:8888/status/1
+
 http://localhost:8888/mensagem/1
 
 
@@ -114,7 +91,13 @@ http://localhost:8888/mensagem/1
 
 
 
-# dashboard
+# Módulo Dashboard
 Este módulo está em desenvolvimento, utilizando-se do framework Vue , utiliza bibliotecas como axios, bootstrap-vue, vue-router.
+Para executá-lo, abra um novo prompt de comando ou shell em "teste-smarkio/passo-05/dashboard" e execute o comando:
+
+"npm run serve"
+
+Para visualizar acesse http://localhost:8080
+
 
 

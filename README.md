@@ -36,28 +36,37 @@ Confira a existência do MySql-server e do cliente Workbench em seu sistema.
 Crie um usuário e senha com permissão DBA no workbench em: Server > Users and Privileges.
 Atenção: Não é possível executar o projeto utilizando a conta ROOT do mysql por questões de segurança, é extritamente necessário a criação de um novo usuário com permissões DBA.
 
-imagem 01
+<img src="/imagens/01.png" alt="Criando usuário e senha"/>
 
-Criando login e senha:
-imagem 02
+
+Criando usuário e senha:
+
+<img src="/imagens/02.png" alt="Criando login e senha"/>
+
 
 Atribuindo permissões DBA:
-imagem 03
+
+<img src="/imagens/03.png" alt="Atribuindo permissões DBA"/>
 
 Execute o código SQL disponível em "/passo-01", este código é responsável pela criação do banco de dados e todas as entidades necessárias.
-imagem 04
+
+<img src="/imagens/04.png" alt="Criar banco de dados"/>
 
 ## Passo 02
 Execute o código SQL disponível em "/passo-02", este código é responsável pela inserção de dados fictícios em todas as tabelas para a execução do teste prático.
-imagem 05
+
+<img src="/imagens/05.png" alt="Inserir dados fictícios no banco de dados"/>
 
 ## Passo 03
 Execute cada um dos códigos existentes em "/passo-03", cada arquivo SQL possui o código referente à uma query solicitada.
-imagem 06
+
+<img src="/imagens/06.png" alt="Consultas solicitadas"/>
 
 ## Passo 04
 O arquivo AnaliseDescritiva.sql possui 2 querys necessárias para uma posterior análise descritiva aprofundada.
-imagem 07
+
+<img src="/imagens/07.png" alt="Análise Descritiva"/>
+
 ## Passo 05
 
 

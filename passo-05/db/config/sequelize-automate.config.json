@@ -1,0 +1,16 @@
+{
+    "dbOptions":{
+        "database": "smarkiodb",
+        "username": "smarkio",
+        "password": "12345",
+        "dialect": "mysql",
+        "host": "localhost",
+        "port": 3306,
+        "logging": false
+    },
+    "options":{
+        "type": "js",
+        "camelcase": true,
+        "dir":"models"
+    }
+}

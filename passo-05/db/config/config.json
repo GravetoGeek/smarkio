@@ -1,0 +1,32 @@
+{
+  "development": {
+    "username": "smarkio",
+    "password": "12345",
+    "database": "smarkiodb",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "define":{
+      "timestamps": false
+    }
+  },
+  "test": {
+    "username": "smarkio",
+    "password": "12345",
+    "database": "smarkiodb",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "define":{
+      "timestamps": false
+    }
+  },
+  "production": {
+    "username": "smarkio",
+    "password": "12345",
+    "database": "smarkiodb",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "define":{
+      "timestamps": false
+    }
+  }
+}

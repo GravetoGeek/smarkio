@@ -1,5 +1,7 @@
 <template>
   <div class="home">
+    <h4>Teste anychart</h4></h4>
+    <div id="grafico"></div>
     {{ mensagens }}
     <!-- {{ mensagens }} -->
 
@@ -11,6 +13,7 @@
 // @ is an alias to /src
 import axios from 'axios';
 import moment from 'moment';
+import anychart from 'anychart';
 //import graficolinha from '../components/graficolinha';
 
 
@@ -26,6 +29,12 @@ export default {
       status:[],
       mensagens:[],
       query:[],
+      dados: [
+  {x: "A", value: 637166},
+  {x: "B", value: 721630},
+  {x: "C", value: 148662},
+  {x: "D", value: 78662},
+  {x: "E", value: 90000}],
       chartOptions:{
         responsive:true,
         maintainAspectRatio: false
@@ -64,7 +73,9 @@ export default {
       const mensagens = await axios.get("http://localhost:8888/mensagens");
 
 
-
+      var chart = anychart.pie(this.dados);
+      chart.container("grafico");
+      chart.draw();
 
       console.log(usuarios);
       console.log(intencoes);

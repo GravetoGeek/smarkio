@@ -1,7 +1,7 @@
 {
     "dbOptions":{
         "database": "smarkiodb", 
-        "username": "smarkio",  //Não utilize conta root, é necessário uma nova conda com permissões de acesso.
+        "username": "smarkio",  
         "password": "12345",
         "dialect": "mysql",
         "host": "localhost",

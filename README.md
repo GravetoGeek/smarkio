@@ -2,15 +2,15 @@
 
 Este teste foi dividido em cinco etapas:
 
-Modelagem do banco de dados;
+1. Modelagem do banco de dados;
 
-Popular o banco de dados com grande volume de dados;
+2. Popular o banco de dados com grande volume de dados;
 
-Desenvolver query's;
+3. Desenvolver query's;
 
-Faça uma análise estatística descritiva dos status e das mensagens da table3 exporte os dados analisados em .csv.;
+4. Faça uma análise estatística descritiva dos status e das mensagens da table3 exporte os dados analisados em .csv.;
 
-Desenvolver uma aplicação node.js para exibição das informações em um dashboard.
+5. Desenvolver uma aplicação node.js para exibição das informações em um dashboard.
 
 
 # Modo de instalar:
@@ -20,7 +20,7 @@ Confira a existência do MySql-server e do cliente Workbench em seu sistema.
 ## Passo 01
 Crie um usuário e senha com permissão DBA no workbench em: Server > Users and Privileges.
 
-**Atenção**: Não é possível executar o projeto utilizando a conta ROOT do mysql por questões de segurança, é extritamente necessário a criação de um novo usuário com permissões DBA.
+:warning: **Atenção**: Não é possível executar o projeto utilizando a conta ROOT do mysql por questões de segurança, é extritamente necessário a criação de um novo usuário com permissões DBA.
 
 <img src="/imagens/01.png" alt="Criando usuário e senha"/>
 

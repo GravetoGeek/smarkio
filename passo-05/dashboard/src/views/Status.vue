@@ -1,5 +1,6 @@
 <template>
   <div class="status">
+    {{status}}
   </div>
  
 </template>
@@ -7,8 +8,7 @@
 <script>
 // @ is an alias to /src
 import axios from 'axios';
-import moment from 'moment';
-import graficolinha from '../components/graficolinha'
+
 
 export default {
   name: 'Status',

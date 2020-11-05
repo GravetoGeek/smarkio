@@ -1,6 +1,6 @@
 <template>
   <div class="intencao">
-
+    {{intencoes}}
   </div>
  
 </template>
@@ -9,10 +9,10 @@
 // @ is an alias to /src
 import axios from 'axios';
 import moment from 'moment';
-import graficolinha from '../components/graficolinha'
+
 
 export default {
-  name: 'Intencao',
+  name: 'Intencoes',
   components: {
 
   },

@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h4>Teste anychart</h4></h4>
+    <h4>Teste anychart</h4>
     <div id="grafico"></div>
     {{ mensagens }}
     <!-- {{ mensagens }} -->

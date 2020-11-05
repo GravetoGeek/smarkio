@@ -1,4 +1,4 @@
-# Teste prático BI
+<h1 align="center"> Teste prático BI</h1>
 
 Este teste foi dividido em cinco etapas:
 

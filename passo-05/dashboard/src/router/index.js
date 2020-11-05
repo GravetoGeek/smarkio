@@ -1,8 +1,16 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Intencoes from '../views/Intencoes.vue'
+import Mensagens from '../views/Mensagens.vue'
+import Status from '../views/Status.vue'
+import Usuarios from '../views/Usuarios.vue'
 
 Vue.use(VueRouter)
+Vue.use(Intencoes)
+Vue.use(Mensagens)
+Vue.use(Status)
+Vue.use(Usuarios)
 
 const routes = [
   {
@@ -20,7 +28,7 @@ const routes = [
   },
   {
     path:'/intencoes',
-    name:'Intenções',
+    name:'Intencoes',
     component:Intencoes
   },
   {
@@ -35,7 +43,7 @@ const routes = [
   },
   {
     path:'/usuarios',
-    name:'Usuários',
+    name:'Usuarios',
     component:Usuarios
   }
 

@@ -15,6 +15,7 @@
     "chart.js": "^2.9.4",
     "core-js": "^3.6.5",
     "moment": "^2.29.1",
+    "mysql": "^2.18.1",
     "mysql2": "^2.2.5",
     "vue": "^2.6.11",
     "vue-anychart": "git+https://github.com/anychart-integrations/anychart-vue.git",

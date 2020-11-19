@@ -3,7 +3,7 @@
     <div>
     <b-table
       striped hover
-      :items="this.status"
+      :items="this.status.data"
       :fields="campos"
       :sort-by.sync="sortBy"
       :sort-desc.sync="sortDesc"
@@ -48,12 +48,7 @@ export default {
 
 
   async created(){
-      const status = await axios.get("http://localhost:8888/status");
-      console.log(status);
-
-      status.data.forEach(
-        s=>this.status.push(s)
-      );   
+      this.status = await axios.get("http://localhost:8888/status");
     }
 }
 

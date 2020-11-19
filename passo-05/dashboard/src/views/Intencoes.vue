@@ -4,7 +4,7 @@
       <b-table
         striped
         hover
-        :items="this.intencoes"
+        :items="this.intencoes.data"
         :fields="campos"
         :sort-by.sync="sortBy"
         :sort-desc.sync="sortDesc"
@@ -53,16 +53,11 @@ export default {
 
 
   async created() {
-    const intencoes = await axios.get("http://localhost:8888/intencoes");
-    console.log(intencoes);
-
-    intencoes.data.forEach((i) => {
-      (i.data = moment(i.data, "YYYYMMDD").format("DD/MM/YYYY")),
-        this.intencoes.push(i);
-    });
+    this.intencoes = await axios.get("http://localhost:8888/intencoes");
+    this.intencoes.data.forEach((i) => {
+      (i.data = moment(i.data, "YYYYMMDD").format("DD/MM/YYYY"))
+    })
   },
-
-
 }
 
 

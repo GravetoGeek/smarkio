@@ -4,7 +4,7 @@
       <b-table
         striped
         hover
-        :items="this.mensagens"
+        :items="this.mensagens.data"
         :fields="campos"
         :sort-by.sync="sortBy"
         :sort-desc.sync="sortDesc"
@@ -53,13 +53,10 @@ export default {
     };
   },
   async created() {
-    const mensagens = await axios.get("http://localhost:8888/mensagens");
-    console.log(mensagens);
-
-    mensagens.data.forEach((m) => {
-      (m.data = moment(m.data, "YYYYMMDD").format("DD/MM/YYYY")),
-        this.mensagens.push(m);
-    });
+    this.mensagens = await axios.get("http://localhost:8888/mensagens");
+    this.mensagens.data.forEach((m) => {
+      (m.data = moment(m.data, "YYYYMMDD").format("DD/MM/YYYY"))
+    })
   },
 };
 

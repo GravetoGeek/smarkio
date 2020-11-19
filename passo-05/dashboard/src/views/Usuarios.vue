@@ -4,7 +4,7 @@
       <b-table
         striped
         hover
-        :items="this.usuarios"
+        :items="this.usuarios.data"
         :fields="campos"
         :sort-by.sync="sortBy"
         :sort-desc.sync="sortDesc"
@@ -48,13 +48,12 @@ export default {
   },
 
   async created() {
-    const usuarios = await axios.get("http://localhost:8888/usuarios");
-    console.log(usuarios);
-
-    usuarios.data.forEach((u) => {
-      (u.data = moment(u.data, "YYYYMMDD").format("DD/MM/YYYY")),
-        this.usuarios.push(u);
+    this.usuarios = await axios.get("http://localhost:8888/usuarios");
+    this.usuarios.data.forEach((u)=>{
+    (u.data = moment(u.data, "YYYYMMDD").format("DD/MM/YYYY"))
     });
+
+
   },
 };
 </script>

@@ -34,6 +34,67 @@ Atribuindo permissões DBA:
 
 <img src="/imagens/03.png" alt="Atribuindo permissões DBA"/>
 
+No arquivo db/config/config.json, altere os campos "username" e "password" para corresponder ao usuário e senha criados on passo 01.
+
+```
+{
+  "development": {
+    "username": "SEU-USUARIO", 
+    "password": "SUA-SENHA",
+    "database": "smarkiodb",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "define":{
+      "timestamps": false
+    }
+  },
+  "test": {
+    "username": "SEU-USUARIO", 
+    "password": "SUA-SENHA",
+    "database": "smarkiodb",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "define":{
+      "timestamps": false
+    }
+  },
+  "production": {
+    "username": "SEU-USUARIO", 
+    "password": "SUA-SENHA",
+    "database": "smarkiodb",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "define":{
+      "timestamps": false
+    }
+  }
+}
+
+```
+
+
+Agora altere também o arquivo db/config/sequelize-automate.config.json.
+
+```
+{
+    "dbOptions":{
+        "database": "smarkiodb", 
+        "username": "SEU-USUARIO",  
+        "password": "SUA-SENHA",
+        "dialect": "mysql",
+        "host": "localhost",
+        "port": 3306,
+        "logging": false
+    },
+    "options":{
+        "type": "js",
+        "camelcase": true,
+        "dir":"models"
+    }
+}
+
+```
+
 Execute o código SQL disponível em "/passo-01", este código é responsável pela criação do banco de dados e todas as entidades necessárias.
 
 <img src="/imagens/04.png" alt="Criar banco de dados"/>

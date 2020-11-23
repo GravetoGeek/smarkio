@@ -156,9 +156,9 @@ http://localhost:8888/mensagem/1
 
 ### Módulo Dashboard
 Este módulo está em desenvolvimento, utilizando-se do framework Vue , utiliza bibliotecas como axios, bootstrap-vue, vue-router.
-Para executá-lo, abra um novo prompt de comando ou shell em "teste-smarkio/passo-05/dashboard" e execute o comando:
+Para executá-lo, abra um novo prompt de comando ou shell em "teste-smarkio/passo-05/smarkiodashboard" e execute o comando:
 
-"npm run serve"
+"npm run dev"
 
 Para visualizar acesse http://localhost:8080
 

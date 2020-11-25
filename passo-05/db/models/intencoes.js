@@ -38,5 +38,7 @@ module.exports = sequelize => {
     indexes: []
   };
   const IntencoesModel = sequelize.define("intencoes_model", attributes, options);
+
+
   return IntencoesModel;
 };

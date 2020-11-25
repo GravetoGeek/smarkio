@@ -81,7 +81,7 @@ export default {
             backgroundColor: 'rgba(28,145,241,0.3)',
             borderColor: 'rgba(28,145,241,0.3)',
             label: 'Dataset-1',
-            data: [20, 10, 4, 2]
+            data: [20, 10, 31, 2]
           },
           {
             backgroundColor: 'rgba(241,28,39,0.3)',
@@ -103,6 +103,8 @@ export default {
         }
       }
       // fim
+      // GRAFICO ÁREA
+      
     }
   },
   methods: {

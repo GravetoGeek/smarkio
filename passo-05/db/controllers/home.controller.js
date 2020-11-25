@@ -7,6 +7,19 @@ const usuarios = model.usuarios_model
 const mensagens = model.mensagens_model
 const intencoes = model.intencoes_model
 const status = model.status_model
+
+intencoes.hasMany(mensagens,{
+    foreignKey: 'idintencao'
+})
+usuarios.hasMany(mensagens,{
+    foreignKey: 'idusuario'
+})
+status.hasOne(mensagens, {
+    foreignKey: 'idstatus'
+})
+mensagens.belongsTo(intencoes)
+mensagens.belongsTo(usuarios)
+mensagens.belongsTo(status)
 // const consulta1 = (request, response) => {
 //     const { count, rows } = usuarios.findAndCountAll({
 //         where: {
@@ -43,7 +56,8 @@ const status = model.status_model
 const consulta2 = (request,response)=>{
     // const { rowsusuarios } = usuarios.findAll()
     const { rowsmensagens } = mensagens.findAll(
-        {            
+        {
+            attributes: ['idmensagem', 'texto', 'data'],
             include: [
                 {
                     model: usuarios,
@@ -62,9 +76,15 @@ const consulta2 = (request,response)=>{
                 }
             ],
             where: {
-                [Op.and]: [Sequelize.where(Sequelize.fn('YEAR', Sequelize.col('data')), 2020),
-                Sequelize.where(Sequelize.fn('MONTH', Sequelize.col('data')), 7)]
+                data:{
+                    [Op.and]: [Sequelize.where(Sequelize.fn('YEAR', Sequelize.col(mensagens.data)), 2020),
+                    Sequelize.where(Sequelize.fn('MONTH', Sequelize.col(mensagens.data)), 7)]
+                }     
             }
+            // where: {
+            //     [Op.and]: [Sequelize.where(Sequelize.fn('YEAR', Sequelize.col('data')), 2020),
+            //     Sequelize.where(Sequelize.fn('MONTH', Sequelize.col('data')), 7)]
+            // }
     }).then(
         (object) => {
             console.log(object)

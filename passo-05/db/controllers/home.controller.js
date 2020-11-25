@@ -8,18 +8,18 @@ const mensagens = model.mensagens_model
 const intencoes = model.intencoes_model
 const status = model.status_model
 
-intencoes.hasMany(mensagens,{
-    foreignKey: 'idintencao'
-})
-usuarios.hasMany(mensagens,{
-    foreignKey: 'idusuario'
-})
-status.hasOne(mensagens, {
-    foreignKey: 'idstatus'
-})
-mensagens.belongsTo(intencoes)
-mensagens.belongsTo(usuarios)
-mensagens.belongsTo(status)
+// intencoes.hasMany(mensagens,{
+//     foreignKey: 'idintencao'
+// })
+// usuarios.hasMany(mensagens,{
+//     foreignKey: 'idusuario'
+// })
+// status.hasOne(mensagens, {
+//     foreignKey: 'idstatus'
+// })
+// mensagens.belongsTo(intencoes)
+// mensagens.belongsTo(usuarios)
+// mensagens.belongsTo(status)
 // const consulta1 = (request, response) => {
 //     const { count, rows } = usuarios.findAndCountAll({
 //         where: {
